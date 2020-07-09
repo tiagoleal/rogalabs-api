@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: postgres
+  user: postgres
+
+development:
+  <<: *default
+  database: rogalabs_development
+
+test:
+  <<: *default
+  database: rogalabs_test
+
+production:
+  <<: *default
+  database: rogalabs_production
+  username: <%= ENV['USERNAME_DATABASE'] %>
+  password: <%= ENV['PASSWORD_DATABASE'] %>
