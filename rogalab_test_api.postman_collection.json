@@ -1,0 +1,1747 @@
+{
+	"info": {
+		"_postman_id": "0c224321-8c72-4042-8e2e-2f0e47cce63b",
+		"name": "rogalab_test_api",
+		"description": "# Introduction\n\nDocumentation Test Api - rogalabs\n\n\n# Authentication\n\nJWT\n\n# Error Codes\n\n**200 - OK**\n\n**201 - Created**\n\n**204 - Not content**\n\n**400 – Bad Request**\n\n**403 – Forbidden**\n\n**404 - Not Found**\n\n**500 - Server error**\n\n\n\n# Rate limit\n\n\n**100 - Request per minute**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"auth\": {\"email\": \"tiago@gmail.com\", \"password\": \"12345678\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/user_token",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user_token"
+							]
+						},
+						"description": "Authenticate user with email, password and return JWT token valid per 1 week. "
+					},
+					"response": [
+						{
+							"name": "auth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"auth\": {\"email\": \"tiago@gmail.com\", \"password\": \"tre12345678\"}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/user_token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"user_token"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"69f3944d3f9331f5141707539c7c6688\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "34b8de06-d021-46ae-9556-7835959102a6"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.291505"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5MDI1NjgsInN1YiI6MX0.CShkWzarDrCxjfCN1a5NczTU1o0SflL5jxxm6oOfv8o\"\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\":\n    {\n        \"name\": \"tiago\", \n        \"email\": \"tiago@gmail.com\", \n        \"password\": \"12345678\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						},
+						"description": "Create new user"
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\":\n    {\n        \"name\": \"tiago\", \n        \"email\": \"tiago@gmail.com\", \n        \"password\": \"12345678\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:25:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"396f7745090102850df41aa1a9d2f13a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "24f6cb90-5828-408d-bd6e-8524929f5bee"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.455843"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"tiago\",\n    \"email\": \"tiago@gmail.com\"\n}"
+						},
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\":\n    {\n        \"name\": \"tiago\", \n        \"email\": \"tiago@gmail.com\", \n        \"password\": \"12345678\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:25:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"396f7745090102850df41aa1a9d2f13a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "24f6cb90-5828-408d-bd6e-8524929f5bee"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.455843"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"tiago\",\n    \"email\": \"tiago@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5MjM5NDcsInN1YiI6MX0.zqZ54y1RkLpP_74XeCK6CjBOYAbaTZuz_lChjZz5TrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":{\n    \"name\": \"tiago\", \n    \"email\": \"tiago@gmail.com\", \n    \"password\": \"12345678\"\n}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/1",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						},
+						"description": "Update user logged"
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"user\":{\n    \"name\": \"tiago\", \n    \"email\": \"tiago@gmail.com\", \n    \"password\": \"12345678\"\n}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/1",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:30:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"396f7745090102850df41aa1a9d2f13a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "2e5dfbf9-710e-40d1-a8fe-3074df8c0262"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.337387"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"tiago\",\n    \"email\": \"tiago@gmail.com\"\n}"
+						},
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"user\":{\n    \"name\": \"tiago\", \n    \"email\": \"tiago@gmail.com\", \n    \"password\": \"12345678\"\n}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/1",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:30:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"396f7745090102850df41aa1a9d2f13a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "2e5dfbf9-710e-40d1-a8fe-3074df8c0262"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.337387"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"tiago\",\n    \"email\": \"tiago@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "change-password-logged",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5MjM5NDcsInN1YiI6MX0.zqZ54y1RkLpP_74XeCK6CjBOYAbaTZuz_lChjZz5TrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"tiago12\", \n    \"email\": \"tiago@gmail.com\", \n    \"password\": \"tre12345678\",\n    \"new_password\": \"12345678\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/password/change",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"password",
+								"change"
+							]
+						},
+						"description": "Update password user logged."
+					},
+					"response": [
+						{
+							"name": "change-password-logged",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"tiago12\", \n    \"email\": \"tiago@gmail.com\", \n    \"password\": \"tre12345678\",\n    \"new_password\": \"12345678\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/password/change",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"password",
+										"change"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:50:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"d614f4b23ead793d31479d4c9e00ab76\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a10d9d08-1715-4980-9943-99da59d0101b"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "2.279039"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"password_digest\": \"$2a$12$7ZXeVTjxVCrUPLD4xu0RBON.ZoBrlfONJ1Cc7X2syTP1rCxl2DjPe\",\n        \"id\": 1,\n        \"name\": \"tiago\",\n        \"email\": \"tiago@gmail.com\",\n        \"reset_password_token\": null,\n        \"reset_password_valid\": \"2020-07-09T18:32:38.485Z\",\n        \"created_at\": \"2020-07-09T18:25:17.045Z\",\n        \"updated_at\": \"2020-07-09T18:50:47.204Z\"\n    },\n    \"success\": \"User tiago successfully change password!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "forgot-password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"tiago\", \n    \"email\": \"tiago@gmail.com\"\n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/password/forgot",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"password",
+								"forgot"
+							]
+						},
+						"description": "Request password recovery and receive the temporary token to reset password."
+					},
+					"response": [
+						{
+							"name": "forgot-password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"tiago\", \n    \"email\": \"tiago@gmail.com\"\n   \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/password/forgot",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"password",
+										"forgot"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:32:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"0dd0f70cae347813ebecc8c686c7dece\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "329287a2-c0eb-4773-b071-d85120a60a16"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.029225"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": \"tiago@gmail.com\",\n    \"token_reset\": \"d1e514382b42c585ae0e\"\n}"
+						}
+					]
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"tiago@gmail.com\", \n    \"token\": \"d1e514382b42c585ae0e\",\n    \"password\": \"tre12345678\"\n    \n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/password/reset",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"password",
+								"reset"
+							]
+						},
+						"description": "Reset password with temporary token."
+					},
+					"response": [
+						{
+							"name": "reset-password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"tiago@gmail.com\", \n    \"token\": \"d1e514382b42c585ae0e\",\n    \"password\": \"tre12345678\"\n    \n}\n\n\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/password/reset",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"password",
+										"reset"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:33:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"3967619e27bed68583f80511c5826355\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "3709f2b9-6e3d-4f60-bfa3-6528b0789ef3"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.371981"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": \"tiago@gmail.com\",\n    \"success\": \"User tiago successfully reset password!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "current",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5MjM5NDcsInN1YiI6MX0.zqZ54y1RkLpP_74XeCK6CjBOYAbaTZuz_lChjZz5TrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":{\n    \"name\": \"tiago\", \n    \"email\": \"tiago@gmail.com\", \n    \"password\": \"12345678\"\n}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/current",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"current"
+							]
+						},
+						"description": "Return current user logged"
+					},
+					"response": [
+						{
+							"name": "current",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"user\":{\n    \"name\": \"tiago\", \n    \"email\": \"tiago@gmail.com\", \n    \"password\": \"12345678\"\n}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/users/current",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"current"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:31:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"396f7745090102850df41aa1a9d2f13a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "819689c8-70d0-4959-ae42-1e7d8b14510f"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.012078"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"tiago\",\n    \"email\": \"tiago@gmail.com\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Complaits",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5MjM5NDcsInN1YiI6MX0.zqZ54y1RkLpP_74XeCK6CjBOYAbaTZuz_lChjZz5TrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n        \"description\": \"Briga gruta dos indios12\", \n        \"latitude\": \"-29.705296\", \n        \"longitude\": \"-52.4145824,15\",\n        \"status\": 1\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"complaints"
+							]
+						},
+						"description": "Create new complaint."
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n    {\n        \"description\": \"Briga gruta dos indios12\", \n        \"latitude\": \"-29.705296\", \n        \"longitude\": \"-52.4145824,15\",\n        \"status\": 1\n    }\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"complaints"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:34:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"9484d52cb37cfadebf6b82334a95bbf0\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "dca77607-1f9f-4857-b08e-04e23889d29d"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.051318"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 51,\n    \"description\": \"Briga gruta dos indios12\",\n    \"status\": 1,\n    \"latitude\": -29.705296,\n    \"longitude\": -52.4145824,\n    \"adopted_measure\": null,\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"tiago\",\n        \"email\": \"tiago@gmail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5MjM5NDcsInN1YiI6MX0.zqZ54y1RkLpP_74XeCK6CjBOYAbaTZuz_lChjZz5TrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n        \"description\": \"indios12\", \n        \"latitude\": \"-29.705296\", \n        \"longitude\": \"-52.4145824,15\",\n        \"status\": 2,\n        \"adopted_measure\":\"asdas\"\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints/1",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"complaints",
+								"1"
+							]
+						},
+						"description": "Update complaint and set to adopted measure to change status value."
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n    {\n        \"description\": \"indios12\", \n        \"latitude\": \"-29.705296\", \n        \"longitude\": \"-52.4145824,15\",\n        \"status\": 2,\n        \"adopted_measure\":\"asdas\"\n    }\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints/1",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"complaints",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:35:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"717c2354b233e9354aa44f1e7bbbca6c\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "ad1115a5-85a4-41e4-b613-df2afcf34b87"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.119938"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"description\": \"indios12\",\n    \"status\": 3,\n    \"latitude\": -29.705296,\n    \"longitude\": -52.4145824,\n    \"adopted_measure\": \"asdas\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"tiago\",\n        \"email\": \"tiago@gmail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5MjM5NDcsInN1YiI6MX0.zqZ54y1RkLpP_74XeCK6CjBOYAbaTZuz_lChjZz5TrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints?page=1&query=denuncia 2",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"complaints"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "query",
+									"value": "denuncia 2"
+								}
+							]
+						},
+						"description": "list complaint with paginate and permit to search complaint through description. "
+					},
+					"response": [
+						{
+							"name": "list fifteen registers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"complaints"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:59:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"65db82b5e33a71ac2f83188a450333a5\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "7632be5f-e720-425d-95ee-c747b3534514"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.142633"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"description\": \"denuncia 1\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"description\": \"denuncia 2\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 4,\n        \"description\": \"denuncia 3\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"description\": \"denuncia 4\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 6,\n        \"description\": \"denuncia 5\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 7,\n        \"description\": \"denuncia 6\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 8,\n        \"description\": \"denuncia 7\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 9,\n        \"description\": \"denuncia 8\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 10,\n        \"description\": \"denuncia 9\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 11,\n        \"description\": \"denuncia 10\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 12,\n        \"description\": \"denuncia 11\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 13,\n        \"description\": \"denuncia 12\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 14,\n        \"description\": \"denuncia 13\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 15,\n        \"description\": \"denuncia 14\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 16,\n        \"description\": \"denuncia 15\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    }\n]"
+						},
+						{
+							"name": "search per description",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints?query=denuncia 2",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"complaints"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "denuncia 2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 19:02:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"87a38326e6c9ce19dedfd6996f3a8447\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "0a74e01a-38a4-44b5-9c81-a8df6c26ccc3"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.071795"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"description\": \"denuncia 2\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    }\n]"
+						},
+						{
+							"name": "lista registers per page",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints?page=3",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"complaints"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 19:01:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"433fecfe0238396a399b121c2b2c7422\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "06be01bc-1619-46be-858f-c461ed685b4a"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.091554"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 32,\n        \"description\": \"denuncia 31\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 33,\n        \"description\": \"denuncia 32\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 34,\n        \"description\": \"denuncia 33\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 35,\n        \"description\": \"denuncia 34\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 36,\n        \"description\": \"denuncia 35\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 37,\n        \"description\": \"denuncia 36\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 38,\n        \"description\": \"denuncia 37\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 39,\n        \"description\": \"denuncia 38\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 40,\n        \"description\": \"denuncia 39\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 41,\n        \"description\": \"denuncia 40\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 42,\n        \"description\": \"denuncia 41\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 43,\n        \"description\": \"denuncia 42\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 44,\n        \"description\": \"denuncia 43\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 45,\n        \"description\": \"denuncia 44\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    },\n    {\n        \"id\": 46,\n        \"description\": \"denuncia 45\",\n        \"status\": 1,\n        \"latitude\": -29.705296,\n        \"longitude\": -52.4145824,\n        \"adopted_measure\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"tiago\",\n            \"email\": \"tiago@gmail.com\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ5MjM5NDcsInN1YiI6MX0.zqZ54y1RkLpP_74XeCK6CjBOYAbaTZuz_lChjZz5TrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints/1",
+							"protocol": "https",
+							"host": [
+								"tiagoleal-rogalabs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"complaints",
+								"1"
+							]
+						},
+						"description": "Delete complaint"
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tiagoleal-rogalabs-api.herokuapp.com/api/v1/complaints/1",
+									"protocol": "https",
+									"host": [
+										"tiagoleal-rogalabs-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"complaints",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 18:35:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "71508c9b-5a3c-4c40-bb09-80dbcc00d17a"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.038584"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "eb1b368c-dfd2-47db-9c07-ad71515064e4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6aef94be-2d57-4b6e-bc56-13f03eb06770",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
