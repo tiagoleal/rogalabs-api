@@ -42,10 +42,10 @@
     - List the complaints with the search per description;
     
 ## Docs API
-  - **Postman Online:** [<b>Documentation API</b>](https://documenter.getpostman.com/view/7576524/T17Kemnj?version=latest#73d12ba9-4391-4af7-baad-d381f70b2a2f){:target="_blank"}<br />
+
+  - **Postman Online:** [<b>Documentation API</b>](https://documenter.getpostman.com/view/7576524/T17Kemnj?version=latest#73d12ba9-4391-4af7-baad-d381f70b2a2f)
 
   - **Postman file JSON:** rogalab_test_api.postman_collection.json
-  
   
   
 ## Getting Started
